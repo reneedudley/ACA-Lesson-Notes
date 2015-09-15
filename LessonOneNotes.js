@@ -1,0 +1,1 @@
+notes and suff for class 1 
