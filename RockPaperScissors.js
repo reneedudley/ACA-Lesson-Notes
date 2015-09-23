@@ -33,7 +33,22 @@ function compareHands(hand1, hand2){
 	}
 
 }
+function acceptableInput(hand){
+	if (hand === 'rock' || hand === 'paper' || hand === 'scissors'){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
 prompt.get(['hand1', 'hand2'], function(error, result){
-	console.log(compareHands(result['hand1'], result['hand2']));
+	var lowerHand1 = result['hand1'].toLowerCase();
+	var lowerHand2 = result['hand2'].toLowerCase();
+	if (acceptableInput(lowerHand1) && acceptableInput(lowerHand2)){
+	console.log(compareHands(lowerHand1, lowerHand2);
+	} else {
+		console.log('only rock, paper, or scissors is acceptable');
+	} 
+
 });
 
