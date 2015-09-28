@@ -34,6 +34,10 @@ function Towers(){
 		if (!checkForWin()){
 			Towers();
 		}
+		else{
+			console.log("you won!");
+			return false;
+		}
 		
 });
 }
