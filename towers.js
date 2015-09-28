@@ -7,11 +7,11 @@ var stacks = {
 	C: [],
 }
 
-function CompareBlock (){
+function CompareBlock (startStack,endStack){
 	var fromStackLastIndex = stacks[startStack].length - 1;
 	var currentBlock = stacks[startStack][fromStackLastIndex];
 	var toStackLastIndex = stacks[endStack].length - 1;
-	var compareBlock = stacks[endStack][toStakLastIndex];
+	var compareBlock = stacks[endStack][toStackLastIndex];
 	return (currentBlock < compareBlock || !compareBlock) ? true : false;
 }
 
@@ -22,7 +22,7 @@ function MoveBlock (startStack, endStack){
 
 
 function checkForWin () {
- 	return (stacks[B] === [4,3,2,1] || stacks[C] === [4,3,2,1]) ? true :false;
+ 	return (stacks['B'].length === 4 || stacks['C'].length === 4) ? true :false;
  } 
 
 function Towers(){
