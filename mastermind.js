@@ -1,22 +1,13 @@
-var board = [
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' '],
-    [' ', ' ', ' ', ' ']
-];
-
+'use strict';
 var newBoard = [];
 
 function printBoard(){
-	for (i=0; i<9; i++){
+	for (var i=0; i<9; i++){
 		newBoard.push([' ', ' ', ' ', ' ']);
 	}
-	console.log(newBoard);
+    for (var i=0; i<9; i++){
+		console.log(newBoard[i].join(' '));
+	}
 }
 printBoard();
+
