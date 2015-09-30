@@ -14,11 +14,11 @@ var numTry=0;
 
 function insertPattern(pattern){
 	var patternArr = pattern.split('');
-	var message = computeMessag(patternArr);
+	var message = computeMessag(pattern);
 	for (var i=0; i<4; i++){
 	newBoard[numTry][i] = patternArr[i];
 	}
-	newBoard.push(message);
+	newBoard[numTry].push(message);
 }
 
 var solution = 'abcd'
@@ -50,7 +50,6 @@ function computeMessag(pattern){
 	if (splitSolution.indexOf(splitPattern[0]) > -1) {
     lettersCorrect += 1;
 	}
-	
 	if (splitSolution.indexOf(splitPattern[1]) > -1) {
 	    lettersCorrect += 1;
 	}
@@ -60,8 +59,8 @@ function computeMessag(pattern){
 	if (splitSolution.indexOf(splitPattern[3]) > -1) {
 	    lettersCorrect += 1;
 	}
-	var lettersCorrect = lettersSpacesCorrect - lettersCorrect;
-	return colors.red(lettersSpaceCorrect) + ' - ' + lettersCorrect;
+	 lettersCorrect = lettersSpacesCorrect - lettersCorrect;
+	return colors.red(lettersSpacesCorrect) + ' - ' + lettersCorrect;
 }
 
 var prompt = require('prompt');
