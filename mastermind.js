@@ -21,7 +21,17 @@ function insertPattern(pattern){
 	newBoard[numTry].push(message);
 }
 
-var solution = 'abcd'
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+var solution = '';
+var letters = ['a','b','c','d','e','f','g','h'];
+function generateSolution(){
+	for (var i=0; i<4; i++){
+		var randomIndex= getRandomInt(0, letters.length);
+		solution = solution + letters[randomIndex];
+	}
+}
 
 function checkSolution(pattern){
 	if (pattern === solution){
@@ -66,7 +76,7 @@ function computeMessag(pattern){
 var prompt = require('prompt');
 prompt.start();
 
-//
+generateSolution();
 function game(){
 	printBoard();
 	prompt.get(['pattern'], function(error, result) {
@@ -82,3 +92,4 @@ function game(){
 	}
 
 game();
+
