@@ -10,9 +10,13 @@ for (var i=2; i<2000; i+=2){
 		b=c;
 	if (c%2===0 && c<4000000){
 		numbers.push(c);
-		console.log(numbers);
 	}
-
 }
+
+var sum =0;
+for (var j=0;j<numbers.length;j++){
+	sum = sum + numbers[j];
+}
+console.log(sum);
 
 
